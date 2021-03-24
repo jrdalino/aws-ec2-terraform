@@ -5,7 +5,7 @@
 - AssumeRole: "OrganizationAccountAccessRole" should exist in the destination AWS account
 
 ## Terraform Module Usage
-- Copy the contents of /examples folder (main.tf, ouputs.tf, state_config.tf, terraform.tfvars and variabels.tf)
+- Copy the contents of /examples folder (main.tf, ouputs.tf, state_config.tf, terraform.tfvars and variables.tf)
 - Include this repository as a module in your existing terraform code:
 ```
 module "ec2" {
@@ -67,7 +67,8 @@ cat ~/.ssh/id_rsa.pub
 
 ## Install MySQL Client & Connect to RDS MySQL
 ```
-sudo yum install -y https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+sudo yum update -y
+sudo yum install -y https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 sudo yum install -y mysql-community-client
 mysql -h bbsdm-shared-rds-name.cxutkfl8nfhe.ap-southeast-1.rds.amazonaws.com -P 3306 -u admin -p
 ```
