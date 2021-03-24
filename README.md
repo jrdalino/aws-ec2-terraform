@@ -65,11 +65,17 @@ The key's randomart image is:
 cat ~/.ssh/id_rsa.pub
 ```
 
-## Install MySQL Client & Connect to RDS MySQL
+## Install MySQL Client (This has already been done via user_data)
 ```
 sudo yum update -y
 sudo yum install -y https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 sudo yum install -y mysql-community-client
+```
+
+## Connect to Bastion > RRD MySQL
+```
+cd ~/.ssh/
+ssh -i id_rsa ec2-user@54.254.14.38
 mysql -h bbsdm-shared-rds-name.cxutkfl8nfhe.ap-southeast-1.rds.amazonaws.com -P 3306 -u admin -p
 ```
 
