@@ -72,7 +72,7 @@ sudo yum install -y https://dev.mysql.com/get/mysql80-community-release-el7-3.no
 sudo yum install -y mysql-community-client
 ```
 
-## Connect to Bastion > RRD MySQL
+## Connect to Bastion > RDS MySQL
 ```
 cd ~/.ssh/
 ssh -i id_rsa ec2-user@54.254.14.38
